@@ -1,6 +1,4 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
-# Project Name
+# Cultkits
 
 > Description the project.
 
