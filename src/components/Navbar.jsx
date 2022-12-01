@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Search } from '@material-ui/icons';
+import { Search, ShoppingCartOutlined } from '@material-ui/icons';
+import { Badge } from '@material-ui/core';
+import logo from '../assets/logo.jpeg';
 
 const Container = styled.div`
   height: 10em;
@@ -26,6 +28,9 @@ const Center = styled.div`
 `;
 const Right = styled.div`
   flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 const Language = styled.span`
@@ -46,8 +51,13 @@ const Input = styled.input`
   border: none;
 `;
 
-const Logo = styled.h1`
-  font-weigth: bold; 
+const Logo = styled.div`
+  border: 2px solid black;
+`;
+
+const MenuItem = styled.div`
+  font-size: 1em;
+  cursor: pointer;
 `;
 
 const Navbar = () => (
@@ -55,19 +65,25 @@ const Navbar = () => (
     <Wrapper>
       <Left>
         <SearchContainer>
-          <Language>
-            EN
-          </Language>
+          <Language>EN</Language>
           <Input />
           <Search />
         </SearchContainer>
       </Left>
       <Center>
         <Logo>
-          CultKits
+          <img src={logo} alt="logo" />
         </Logo>
       </Center>
-      <Right>Right</Right>
+      <Right>
+        <MenuItem>REGISTER</MenuItem>
+        <MenuItem>SIGN IN</MenuItem>
+        <MenuItem>
+          <Badge badgeContent={4} color="primary">
+            <ShoppingCartOutlined color="action" />
+          </Badge>
+        </MenuItem>
+      </Right>
     </Wrapper>
   </Container>
 );
