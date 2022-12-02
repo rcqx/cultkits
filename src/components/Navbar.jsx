@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Search, ShoppingCartOutlined } from '@material-ui/icons';
+import {
+  Search,
+  ShoppingCartOutlined,
+  PersonOutlineRounded,
+  FavoriteBorderOutlined,
+}
+  from '@material-ui/icons';
 import { Badge } from '@material-ui/core';
 import logo from '../assets/logo.jpeg';
 
@@ -11,17 +17,19 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  padding: 1em 2em;
+  padding: 0 4em;
+  padding-top: 1.5em;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-item: center;
-
 `;
+
 const Center = styled.div`
   flex: 1;
   text-align: center;
@@ -29,35 +37,24 @@ const Center = styled.div`
 const Right = styled.div`
   flex: 1;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
 `;
 
-const Language = styled.span`
-  flex: 1; 
-  display: flex;
-  align-item: center;
-`;
-
 const SearchContainer = styled.div`
-  border: 1px solid black;
   display: flex;
   align-items: center;
   margin-left: 1.25em;
   padding: 5px;
+  cursor: pointer;
 `;
 
-const Input = styled.input`
-  border: none;
-`;
-
-const Logo = styled.div`
-  border: 2px solid black;
-`;
+const Logo = styled.div``;
 
 const MenuItem = styled.div`
   font-size: 1em;
   cursor: pointer;
+  margin-left: 1.5em;
 `;
 
 const Navbar = () => (
@@ -65,22 +62,24 @@ const Navbar = () => (
     <Wrapper>
       <Left>
         <SearchContainer>
-          <Language>EN</Language>
-          <Input />
-          <Search />
+          <Search fontSize="large" style={{ color: 'gray' }} />
         </SearchContainer>
       </Left>
       <Center>
         <Logo>
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" style={{ width: '4.5em' }} />
         </Logo>
       </Center>
       <Right>
-        <MenuItem>REGISTER</MenuItem>
-        <MenuItem>SIGN IN</MenuItem>
+        <MenuItem>
+          <FavoriteBorderOutlined fontSize="large" style={{ color: 'gray' }} />
+        </MenuItem>
+        <MenuItem>
+          <PersonOutlineRounded fontSize="large" style={{ color: 'gray' }} />
+        </MenuItem>
         <MenuItem>
           <Badge badgeContent={4} color="primary">
-            <ShoppingCartOutlined color="action" />
+            <ShoppingCartOutlined color="action" fontSize="large" />
           </Badge>
         </MenuItem>
       </Right>
