@@ -1,41 +1,27 @@
-.App {
-  text-align: center;
+#slide1 {
+  background-image: url("./assets/hero1.webp");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#slide2 {
+  background-image: url("./assets/hero2.webp");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+#slide3 {
+  background-image: url("./assets/hero3.webp");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+#slide4 {
+  background-image: url("./assets/hero4.webp");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }

@@ -3,11 +3,9 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
 
 const Container = styled.div`
   width: 100%;
-  height: 650px;
-  border: 2px solid red;
+  height: 85vh;
   display: flex;
   position: relative;
-  overflow: hidden;
 `;
 
 const Arrow = styled.div`
@@ -30,6 +28,7 @@ const Arrow = styled.div`
 
 const Wrapper = styled.div`
   height: 100%;
+  display: flex;
 `;
 
 const Slide = styled.div`
@@ -37,22 +36,8 @@ const Slide = styled.div`
   heigth: 100vh;
   display: flex;
   align-items: center;
-`;
-
-const ImgContainer = styled.div`
-  flex: 1;
-  height: 100%;
-`;
-
-// const InfoContainer = styled.div`
-//   flex: 1;
-// `;
-
-const Image = styled.img`
-  height: 80%;
-  scale: 110%;
-  position: relative;
-  top: -130px;
+  border: 2px solid green;
+  overflow: hidden;
 `;
 
 const Slider = () => (
@@ -61,11 +46,10 @@ const Slider = () => (
       <ArrowLeftOutlined />
     </Arrow>
     <Wrapper>
-      <Slide>
-        <ImgContainer>
-          <Image src="https://cdn.shopify.com/s/files/1/0622/3691/7987/files/2160-x-1440-NEW-IN-Header_1500x.jpg?v=1669404748" />
-        </ImgContainer>
-      </Slide>
+      <Slide id="slide1" />
+      <Slide id="slide2" />
+      <Slide id="slide3" />
+      <Slide id="slide4" />
     </Wrapper>
     <Arrow direction="right">
       <ArrowRightOutlined />
