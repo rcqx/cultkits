@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
 
@@ -24,11 +25,13 @@ const Arrow = styled.div`
   right: ${(props) => props.direction === 'right' && '10px'};
   margin: auto;
   opacity: 0.5;
+  z-index: 2;
 `;
 
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
+  transform: translateX(${(props) => props.slideIndex * -100}vw)
 `;
 
 const Slide = styled.div`
@@ -36,25 +39,35 @@ const Slide = styled.div`
   heigth: 100vh;
   display: flex;
   align-items: center;
-  border: 2px solid green;
   overflow: hidden;
 `;
 
-const Slider = () => (
-  <Container>
-    <Arrow direction="left">
-      <ArrowLeftOutlined />
-    </Arrow>
-    <Wrapper>
-      <Slide id="slide1" />
-      <Slide id="slide2" />
-      <Slide id="slide3" />
-      <Slide id="slide4" />
-    </Wrapper>
-    <Arrow direction="right">
-      <ArrowRightOutlined />
-    </Arrow>
-  </Container>
-);
+const Slider = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const handleClick = (direction) => {
+    if (direction === 'left') {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+    } else {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+    }
+  };
+
+  return (
+    <Container>
+      <Arrow direction="left" onClick={() => handleClick('left')}>
+        <ArrowLeftOutlined />
+      </Arrow>
+      <Wrapper slideIndex={slideIndex}>
+        <Slide id="slide1" />
+        <Slide id="slide2" />
+        <Slide id="slide3" />
+        <Slide id="slide4" />
+      </Wrapper>
+      <Arrow direction="right" onClick={() => handleClick('right')}>
+        <ArrowRightOutlined />
+      </Arrow>
+    </Container>
+  );
+};
 
 export default Slider;

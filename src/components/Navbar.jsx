@@ -13,7 +13,6 @@ import logo from '../assets/logo.jpeg';
 const Container = styled.div`
   height: 9em;
   background-color: white;
-  border: 2px solid black;
 `;
 
 const Wrapper = styled.div`
