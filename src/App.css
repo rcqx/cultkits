@@ -25,3 +25,15 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* .image-cont {
+  border: 2px solid red;
+  width: 50%;
+} */
+
+/* @media all and (max-width: 768px) {
+  .image-cont {
+    width: 100%;
+    border: 2px solid blue;
+  }
+} */

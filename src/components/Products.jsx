@@ -4,7 +4,7 @@ import products from '../data';
 
 const Container = styled.div`
   width: 100%;
-  height: 900px;
+  height: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +36,6 @@ const Button = styled.button`
   padding 1em 2.25em;
   cursor: pointer;
   letter-spacing: 0.055em;
-  margin-bottom: 4em;
   font-size: 0.9em;
   margin-top: 2em;
   width: 8.5em;
