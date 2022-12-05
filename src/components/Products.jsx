@@ -5,10 +5,12 @@ import products from '../data';
 const Container = styled.div`
   width: 100%;
   height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const ProductsContainer = styled.div`
-  height: 400px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -24,6 +26,22 @@ const Title = styled.h1`
   letter-spacing: 0.05em;
   margin-left: 2em;
   margin-bottom: 1em;
+  text-align: left;
+  width: 100vw;
+  padding-left: 2.8em;
+`;
+
+const Button = styled.button`
+  border: none;
+  padding 1em 2.25em;
+  cursor: pointer;
+  letter-spacing: 0.055em;
+  margin-bottom: 4em;
+  font-size: 0.9em;
+  margin-top: 2em;
+  width: 8.5em;
+  background-color: black;
+  color white;
 `;
 
 const Products = () => (
@@ -34,6 +52,7 @@ const Products = () => (
         <ProductItem key={item.id} item={item} />
       ))}
     </ProductsContainer>
+    <Button>View all</Button>
   </Container>
 );
 

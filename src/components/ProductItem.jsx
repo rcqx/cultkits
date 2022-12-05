@@ -3,12 +3,20 @@ import PropTypes from 'prop-types';
 
 const Container = styled.div`
   flex: 1;
-  margin-left: 0.5em;
+  margin-left: 0.7em;
   cursor: pointer;
+  overflow: hidden;
+`;
+
+const ImageContainer = styled.div`
+  overflow: hidden;
+  height: 455px;
 `;
 
 const Image = styled.img`
   width: 100%;
+  display: flex;
+  position: relative;
 `;
 
 const Title = styled.p`
@@ -22,7 +30,9 @@ const Description = styled.p`
 
 const ProductItem = ({ item }) => (
   <Container>
-    <Image src={item.img} />
+    <ImageContainer>
+      <Image src={item.img} />
+    </ImageContainer>
     <Title>{item.title}</Title>
     <Description>{item.price}</Description>
   </Container>
