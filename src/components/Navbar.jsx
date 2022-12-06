@@ -11,7 +11,6 @@ import { Badge } from '@material-ui/core';
 import logo from '../assets/logo.jpeg';
 
 const Container = styled.div`
-  height: 9em;
   background-color: white;
 `;
 
@@ -26,20 +25,20 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-item: center;
-  justify-content: start;
-  border: 1px solid red;
+  justify-content: space-around;
+  padding: 0 0.65em;
 `;
 
 const Center = styled.div`
-  flex: 1;
+  flex: 2.5;
   text-align: center;
 `;
 const Right = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: end;
-  border: 1px solid red;
+  justify-content: space-around;
+  padding: 0 0.65em;
 `;
 
 // const SearchContainer = styled.div`
@@ -56,8 +55,8 @@ const Navbar = () => (
   <Container>
     <Wrapper>
       <Left>
-        <Menu fontSize="large" style={{ color: 'gray;' }} />
-        <FavoriteBorderOutlined fontSize="large" style={{ color: 'gray' }} />
+        <Menu fontSize="medium" style={{ color: 'black' }} />
+        <FavoriteBorderOutlined fontSize="medium" style={{ color: 'black' }} />
       </Left>
       <Center>
         <Logo>
@@ -65,9 +64,9 @@ const Navbar = () => (
         </Logo>
       </Center>
       <Right>
-        <Search fontSize="large" style={{ color: 'gray' }} />
+        <Search style={{ color: 'black' }} />
         <Badge badgeContent={4} color="primary">
-          <LocalMallOutlined color="action" fontSize="large" />
+          <LocalMallOutlined style={{ color: 'black' }} />
         </Badge>
       </Right>
     </Wrapper>

@@ -4,12 +4,10 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
 
 const Container = styled.div`
   width: 100%;
-  height: 90vh;
+  height: 390px;
   display: flex;
   position: relative;
   overflow: hidden;
-  padding-bottom: 2.5em;
-  border-bottom: 1px solid lightgray;
 `;
 
 const Arrow = styled.div`
@@ -41,7 +39,7 @@ const Wrapper = styled.div`
 const Slide = styled.div`
   width: 100vw;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   overflow: hidden;
 `;
