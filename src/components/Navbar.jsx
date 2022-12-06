@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
+  Menu,
   Search,
-  ShoppingCartOutlined,
-  PersonOutlineRounded,
   FavoriteBorderOutlined,
+  LocalMallOutlined,
 }
   from '@material-ui/icons';
 import { Badge } from '@material-ui/core';
@@ -16,17 +16,18 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  padding: 0 4em;
-  padding-top: 1.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1em 0;
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-item: center;
+  justify-content: start;
+  border: 1px solid red;
 `;
 
 const Center = styled.div`
@@ -36,33 +37,27 @@ const Center = styled.div`
 const Right = styled.div`
   flex: 1;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: end;
+  border: 1px solid red;
 `;
 
-const SearchContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin-left: 1.25em;
-  padding: 5px;
-  cursor: pointer;
-`;
+// const SearchContainer = styled.div`
+//   display: flex;
+//   align-items: center;
+//   margin-left: 1.25em;
+//   padding: 5px;
+//   cursor: pointer;
+// `;
 
 const Logo = styled.div``;
-
-const MenuItem = styled.div`
-  font-size: 1em;
-  cursor: pointer;
-  margin-left: 1.5em;
-`;
 
 const Navbar = () => (
   <Container>
     <Wrapper>
       <Left>
-        <SearchContainer>
-          <Search fontSize="large" style={{ color: 'gray' }} />
-        </SearchContainer>
+        <Menu fontSize="large" style={{ color: 'gray;' }} />
+        <FavoriteBorderOutlined fontSize="large" style={{ color: 'gray' }} />
       </Left>
       <Center>
         <Logo>
@@ -70,17 +65,10 @@ const Navbar = () => (
         </Logo>
       </Center>
       <Right>
-        <MenuItem>
-          <FavoriteBorderOutlined fontSize="large" style={{ color: 'gray' }} />
-        </MenuItem>
-        <MenuItem>
-          <PersonOutlineRounded fontSize="large" style={{ color: 'gray' }} />
-        </MenuItem>
-        <MenuItem>
-          <Badge badgeContent={4} color="primary">
-            <ShoppingCartOutlined color="action" fontSize="large" />
-          </Badge>
-        </MenuItem>
+        <Search fontSize="large" style={{ color: 'gray' }} />
+        <Badge badgeContent={4} color="primary">
+          <LocalMallOutlined color="action" fontSize="large" />
+        </Badge>
       </Right>
     </Wrapper>
   </Container>
