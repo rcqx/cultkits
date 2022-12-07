@@ -11,6 +11,7 @@ const Container = styled.div`
   height: 390px;
   display: flex;
   overflow: hidden;
+  overflow-x: hidden;
   display: flex;
 `;
 
@@ -75,6 +76,8 @@ const StateInput = styled.span`
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
+  const [touchPosition, setTouchPosition] = useState(null);
+
   const handleClick = (direction) => {
     if (direction === 'left') {
       setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 3);
@@ -85,10 +88,41 @@ const Slider = () => {
 
   const images = ['placeholder1', 'placeholder2', 'placeholder3', 'placeholder4'];
 
+  const handleTouchStart = (e) => {
+    const touchDown = e.touches[0].clientX;
+    setTouchPosition(touchDown);
+  };
+
+  const handleTouchMove = (e) => {
+    const touchDown = touchPosition;
+
+    if (touchDown === null) {
+      return;
+    }
+
+    const currentTouch = e.touches[0].clientX;
+    const diff = touchDown - currentTouch;
+
+    if (diff > 5) {
+      handleClick('right');
+    }
+
+    if (diff < -5) {
+      handleClick('left');
+    }
+
+    setTouchPosition(null);
+  };
+
   return (
     <OuterContainer>
       <Container>
-        <Wrapper slideIndex={slideIndex}>
+        <Wrapper
+          slideIndex={slideIndex}
+          className="slides-wrapper"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+        >
           <Slide id="slide1" className="slide">
             <Button>SHOP ALL ENGLAND</Button>
           </Slide>

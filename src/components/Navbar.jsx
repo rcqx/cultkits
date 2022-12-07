@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 0;
+  padding: 0.75em 0;
 `;
 
 const Left = styled.div`
