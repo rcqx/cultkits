@@ -1,30 +1,29 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
+import { KeyboardArrowLeft, KeyboardArrowRight } from '@material-ui/icons';
+
+const OuterContainer = styled.div`
+  border-bottom: 0.25px solid lightgray;
+`;
 
 const Container = styled.div`
   width: 100%;
   height: 390px;
   display: flex;
-  position: relative;
   overflow: hidden;
+  display: flex;
 `;
 
 const Arrow = styled.div`
-  width: 3em;
-  height: 3em;
+  width: 1em;
+  height: 1em;
   background-color: white;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  position: absolute;
-  top: 0;
-  bottom: 0;
   left: ${(props) => props.direction === 'left' && '10px'};
   right: ${(props) => props.direction === 'right' && '10px'};
-  margin: auto;
   opacity: 0.5;
   z-index: 2;
 `;
@@ -49,8 +48,28 @@ const Button = styled.button`
   padding 1em 2.25em;
   cursor: pointer;
   letter-spacing: 0.15em;
-  margin-bottom: 4em;
   font-size: 0.9em;
+`;
+
+const ControllerContainer = styled.div`
+  height: 2.875em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const SlideStateContainer = styled.div`
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+`;
+
+const StateInput = styled.span`
+  border-radius: 50%;
+  border: 1px solid gray;
+  height: 0.5em;
+  width: 0.5em;
+  background-color: ${(props) => props.bgColor}
 `;
 
 const Slider = () => {
@@ -63,29 +82,46 @@ const Slider = () => {
     }
   };
 
+  // const checkedState = {
+  //   'background-color': 'black',
+  // };
+
+  // const test = {
+  //   'background-color': 'test',
+  // };
+
   return (
-    <Container>
-      <Arrow direction="left" onClick={() => handleClick('left')}>
-        <ArrowLeftOutlined />
-      </Arrow>
-      <Wrapper slideIndex={slideIndex}>
-        <Slide id="slide1">
-          <Button>SHOP ALL ENGLAND</Button>
-        </Slide>
-        <Slide id="slide2">
-          <Button>SHOP ALL NEW IN</Button>
-        </Slide>
-        <Slide id="slide3">
-          <Button>SHOP ALL INTERNATIONAL</Button>
-        </Slide>
-        <Slide id="slide4">
-          <Button>&apos;98 DREAMERS COLLECTION</Button>
-        </Slide>
-      </Wrapper>
-      <Arrow direction="right" onClick={() => handleClick('right')}>
-        <ArrowRightOutlined />
-      </Arrow>
-    </Container>
+    <OuterContainer>
+      <Container>
+        <Wrapper slideIndex={slideIndex}>
+          <Slide id="slide1" className="slide">
+            <Button>SHOP ALL ENGLAND</Button>
+          </Slide>
+          <Slide id="slide2" className="slide">
+            <Button>SHOP ALL NEW IN</Button>
+          </Slide>
+          <Slide id="slide3" className="slide">
+            <Button>SHOP ALL INTERNATIONAL</Button>
+          </Slide>
+          <Slide id="slide4" className="slide">
+            <Button>&apos;98 DREAMERS COLLECTION</Button>
+          </Slide>
+        </Wrapper>
+      </Container>
+      <ControllerContainer>
+        <Arrow direction="left" onClick={() => handleClick('left')} style={{ paddingRight: '1em' }}>
+          <KeyboardArrowLeft />
+        </Arrow>
+        <SlideStateContainer>
+          {Array.from([...document.getElementsByClassName('slide')]).map((slide, index) => (
+            <StateInput key={slide} bgColor={index === slideIndex ? 'black' : ''} />
+          ))}
+        </SlideStateContainer>
+        <Arrow direction="right" onClick={() => handleClick('right')} style={{ paddingLeft: '1em' }}>
+          <KeyboardArrowRight />
+        </Arrow>
+      </ControllerContainer>
+    </OuterContainer>
   );
 };
 
