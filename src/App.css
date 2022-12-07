@@ -7,21 +7,21 @@
 
 #slide2 {
   background-image: url("./assets/hero2.webp");
-  background-size: 100%;
+  background-size: 150%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #slide3 {
   background-image: url("./assets/hero3.webp");
-  background-size: 100%;
+  background-size: 150%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #slide4 {
   background-image: url("./assets/hero4.webp");
-  background-size: 100%;
+  background-size: 150%;
   background-position: center;
   background-repeat: no-repeat;
 }

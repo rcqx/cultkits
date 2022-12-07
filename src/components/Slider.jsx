@@ -45,10 +45,11 @@ const Slide = styled.div`
 
 const Button = styled.button`
   border: none;
-  padding 1em 2.25em;
+  padding 0.75em 1.95em;
   cursor: pointer;
-  letter-spacing: 0.15em;
-  font-size: 0.9em;
+  letter-spacing: 0.05em;
+  font-size: 1em;
+  background-color: #FFFFFF;
 `;
 
 const ControllerContainer = styled.div`
@@ -82,13 +83,7 @@ const Slider = () => {
     }
   };
 
-  // const checkedState = {
-  //   'background-color': 'black',
-  // };
-
-  // const test = {
-  //   'background-color': 'test',
-  // };
+  const images = ['placeholder1', 'placeholder2', 'placeholder3', 'placeholder4'];
 
   return (
     <OuterContainer>
@@ -109,15 +104,15 @@ const Slider = () => {
         </Wrapper>
       </Container>
       <ControllerContainer>
-        <Arrow direction="left" onClick={() => handleClick('left')} style={{ paddingRight: '1em' }}>
+        <Arrow direction="left" onClick={() => handleClick('left')} style={{ paddingRight: '1.5em' }}>
           <KeyboardArrowLeft />
         </Arrow>
         <SlideStateContainer>
-          {Array.from([...document.getElementsByClassName('slide')]).map((slide, index) => (
-            <StateInput key={slide} bgColor={index === slideIndex ? 'black' : ''} />
+          {images.map((slide, index) => (
+            <StateInput key={Math.random()} bgColor={index === slideIndex ? 'black' : ''} />
           ))}
         </SlideStateContainer>
-        <Arrow direction="right" onClick={() => handleClick('right')} style={{ paddingLeft: '1em' }}>
+        <Arrow direction="right" onClick={() => handleClick('right')} style={{ paddingLeft: '1.5em' }}>
           <KeyboardArrowRight />
         </Arrow>
       </ControllerContainer>
