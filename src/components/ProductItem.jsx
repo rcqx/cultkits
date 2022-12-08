@@ -2,15 +2,11 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Container = styled.div`
-  flex: 1;
-  margin-left: 0.7em;
   cursor: pointer;
   overflow: hidden;
-`;
-
-const ImageContainer = styled.div`
-  overflow: hidden;
-  height: 455px;
+  width: 45%;
+  border: 1px solid blue;
+  padding: 0.25em;
 `;
 
 const Image = styled.img`
@@ -30,9 +26,7 @@ const Description = styled.p`
 
 const ProductItem = ({ item }) => (
   <Container>
-    <ImageContainer>
-      <Image src={item.img} />
-    </ImageContainer>
+    <Image src={item.img} />
     <Title>{item.title}</Title>
     <Description>{item.price}</Description>
   </Container>

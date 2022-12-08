@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import Announcement from '../components/Announcement';
 import Slider from '../components/Slider';
-// import Products from '../components/Products';
+import Products from '../components/Products';
 // import Advert from '../components/Advert';
 
 const Home = () => (
@@ -9,8 +9,8 @@ const Home = () => (
     <Announcement />
     <Navbar />
     <Slider />
-    {/* <Products />
-    <Advert /> */}
+    <Products />
+    {/* <Advert /> */}
   </div>
 );
 

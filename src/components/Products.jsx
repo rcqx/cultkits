@@ -7,28 +7,23 @@ const Container = styled.div`
   height: 750px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
 `;
 
 const ProductsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-left: 2.5em;
-  margin-right: 3em;
+  justify-content: center;
+  border: 1px solid red;
 `;
 
 const Title = styled.h1`
   font-size: 1em;
-  font-weight: 400;
-  font-size: 1.5em;
-  margin-top: 2.85em;
   letter-spacing: 0.05em;
-  margin-left: 2em;
-  margin-bottom: 1em;
-  text-align: left;
-  width: 100vw;
-  padding-left: 2.8em;
+  font-weight: 400;
+  padding-top: 2em;
+  font-size: 1.2em;
+  margin-left: 0.8em;
 `;
 
 const Button = styled.button`

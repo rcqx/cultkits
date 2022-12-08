@@ -7,8 +7,8 @@ const products = [
   },
   {
     id: 2,
-    img: 'https://cdn.shopify.com/s/files/1/0622/3691/7987/products/IMG_3817_e4a1e113-af1f-4361-8337-da2d71fc86ce_1445x.jpg?v=1669995306',
-    title: '1999/00 AC MILAN LEONARDO #18 *PLAYER ISSUE* CENTENARY HOME SHIRT (L) ADIDAS',
+    img: 'https://cdn.shopify.com/s/files/1/0622/3691/7987/products/image00063_6867ff14-f55f-4f3e-aaa1-569e1c8fc040_493x.jpg?v=1670341102',
+    title: '2007/08 MANCHESTER UNITED RONALDO #7 HOME SHIRT (L) NIKE',
     price: '£999.99 GBP',
   },
   {

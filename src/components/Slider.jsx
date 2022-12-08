@@ -137,7 +137,7 @@ const Slider = () => {
           </Slide>
         </Wrapper>
       </Container>
-      <ControllerContainer>
+      <ControllerContainer style={{ position: 'relative' }}>
         <Arrow direction="left" onClick={() => handleClick('left')} style={{ paddingRight: '1.5em' }}>
           <KeyboardArrowLeft />
         </Arrow>
