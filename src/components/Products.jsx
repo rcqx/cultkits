@@ -21,22 +21,21 @@ const Title = styled.h1`
   font-weight: 400;
   padding-top: 2em;
   font-size: 1.2em;
-  margin-left: 1em;
+  margin-left: 1.5em;
   text-align: left;
   width: 100%;
 `;
 
 const Button = styled.button`
   border: none;
-  padding 0.75em 2.25em;
+  padding 0.95em 2.25em;
   cursor: pointer;
   letter-spacing: 0.055em;
   font-size: 0.9em;
-  margin-top: 1.5em;
   width: 8.5em;
   background-color: black;
   color white;
-  margin-bottom: 1.5em;
+  margin: 2.5em 0;
 `;
 
 const Products = () => (

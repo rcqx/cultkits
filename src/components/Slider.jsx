@@ -68,7 +68,7 @@ const SlideStateContainer = styled.div`
 
 const StateInput = styled.span`
   border-radius: 50%;
-  border: 1px solid gray;
+  border: 1px solid black;
   height: 0.5em;
   width: 0.5em;
   background-color: ${(props) => props.bgColor}
