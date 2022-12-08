@@ -4,17 +4,15 @@ import products from '../data';
 
 const Container = styled.div`
   width: 100%;
-  height: 750px;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
 `;
 
 const ProductsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 1px solid red;
 `;
 
 const Title = styled.h1`
@@ -23,19 +21,22 @@ const Title = styled.h1`
   font-weight: 400;
   padding-top: 2em;
   font-size: 1.2em;
-  margin-left: 0.8em;
+  margin-left: 1em;
+  text-align: left;
+  width: 100%;
 `;
 
 const Button = styled.button`
   border: none;
-  padding 1em 2.25em;
+  padding 0.75em 2.25em;
   cursor: pointer;
   letter-spacing: 0.055em;
   font-size: 0.9em;
-  margin-top: 2em;
+  margin-top: 1.5em;
   width: 8.5em;
   background-color: black;
   color white;
+  margin-bottom: 1.5em;
 `;
 
 const Products = () => (

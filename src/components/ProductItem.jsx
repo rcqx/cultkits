@@ -5,8 +5,8 @@ const Container = styled.div`
   cursor: pointer;
   overflow: hidden;
   width: 45%;
-  border: 1px solid blue;
   padding: 0.25em;
+  margin-bottom: 0.5em;
 `;
 
 const Image = styled.img`
