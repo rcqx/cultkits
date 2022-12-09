@@ -6,6 +6,7 @@ import Advert from '../components/Advert';
 import Various from '../components/Various';
 import Merch from '../components/Merch';
 import Advert2 from '../components/Advert2';
+import Slider2 from '../components/Slider2';
 
 const Home = () => (
   <div>
@@ -17,6 +18,7 @@ const Home = () => (
     <Various />
     <Merch />
     <Advert2 />
+    <Slider2 />
   </div>
 );
 

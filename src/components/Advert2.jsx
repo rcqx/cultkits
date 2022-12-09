@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 const AdvertContainer = styled.div`
-  margin-top: 3em;
+  margin-top: 1.5em;
   display: flex;
   flex-wrap: wrap;
   padding: 0 0.85em;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
 `;
 
 const ImageContainer = styled.div`

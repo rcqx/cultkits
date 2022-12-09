@@ -56,3 +56,10 @@
     transform: translate(-100%, 0);
   }
 }
+
+#advert1 {
+  background-image: url("./assets/ad1.webp");
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
