@@ -15,6 +15,10 @@ const ProductsContainer = styled.div`
   justify-content: center;
 `;
 
+const TitleContainer = styled.div`
+  width: 100%;
+`;
+
 const Title = styled.h1`
   font-size: 1em;
   letter-spacing: 0.05em;
@@ -22,9 +26,9 @@ const Title = styled.h1`
   padding-top: 2em;
   padding-bottom: 1em;
   font-size: 1.2em;
-  margin-left: 1.5em;
   text-align: left;
-  width: 100%;
+  width: 90%;
+  margin-left: 0.8em;
 `;
 
 const Button = styled.button`
@@ -32,7 +36,7 @@ const Button = styled.button`
   padding 0.95em 2.25em;
   cursor: pointer;
   letter-spacing: 0.055em;
-  font-size: 0.9em;
+  font-size: 1em;
   width: 8.5em;
   background-color: black;
   color white;
@@ -41,7 +45,9 @@ const Button = styled.button`
 
 const Products = () => (
   <Container>
-    <Title>NEWLY ADDED PRODUCTS</Title>
+    <TitleContainer>
+      <Title>NEWLY ADDED PRODUCTS</Title>
+    </TitleContainer>
     <ProductsContainer>
       {products.map((item) => (
         <ProductItem key={item.id} item={item} />

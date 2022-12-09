@@ -58,4 +58,31 @@ const various = [
   },
 ];
 
-export { products, various };
+const merch = [
+  {
+    id: 1,
+    img: 'https://cdn.shopify.com/s/files/1/0622/3691/7987/products/IMG_3886_14866777-9d7e-423a-89e9-0af4962a63a6_1100x.jpg?v=1670257351',
+    title: '1998 FENOMENA TRIBUTE SHIRT (MULTIPLE SIZES) DREAMERS',
+    price: '£39.99 GBP',
+  },
+  {
+    id: 2,
+    img: 'https://cdn.shopify.com/s/files/1/0622/3691/7987/products/RAUL-Mockup-1-front_990x.jpg?v=1669135609',
+    title: 'RAUL SPAIN BOOTLEG TEE',
+    price: '£24.99 GBP',
+  },
+  {
+    id: 3,
+    img: 'https://cdn.shopify.com/s/files/1/0622/3691/7987/products/BIGBADJONHHARTSON-Mockup-1-front_990x.jpg?v=1668700158',
+    title: 'HARTSON CYMRU BOOTLEG TEE',
+    price: '£24.99 GBP',
+  },
+  {
+    id: 4,
+    img: 'https://cdn.shopify.com/s/files/1/0622/3691/7987/products/THEPITBULL-Mockup-1-reverse_990x.jpg?v=1668432942',
+    title: 'DAVIDS NETHERLANDS BOOTLEG TEE',
+    price: '£24.99 GBP',
+  },
+];
+
+export { products, various, merch };

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import ProductItem from './ProductItem';
-import { products } from '../data';
+import MerchItem from './ProductItem';
+import { merch } from '../data';
 
 const Container = styled.div`
   width: 100%;
@@ -15,6 +15,10 @@ const MerchContainer = styled.div`
   justify-content: center;
 `;
 
+const TitleContainer = styled.div`
+  width: 100%;
+`;
+
 const Title = styled.h1`
   font-size: 1em;
   letter-spacing: 0.05em;
@@ -22,9 +26,9 @@ const Title = styled.h1`
   padding-top: 2em;
   padding-bottom: 1em;
   font-size: 1.2em;
-  margin-left: 1.5em;
   text-align: left;
-  width: 100%;
+  width: 90%;
+  margin-left: 0.8em;
 `;
 
 const Button = styled.button`
@@ -39,9 +43,11 @@ const Button = styled.button`
   margin: 2.5em 0;
 `;
 
-const Products = () => (
+const Merch = () => (
   <Container>
-    <Title>NEWLY ADDED PRODUCTS</Title>
+    <TitleContainer>
+      <Title>SHOP ALL NEW TEES & MERCHANDISE</Title>
+    </TitleContainer>
     <MerchContainer>
       {merch.map((item) => (
         <MerchItem key={item.id} item={item} />
@@ -51,4 +57,4 @@ const Products = () => (
   </Container>
 );
 
-export default Products;
+export default Merch;
