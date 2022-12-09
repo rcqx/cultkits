@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { ArrowRightAlt } from '@material-ui/icons';
+import PropTypes from 'prop-types';
 
 const Card = styled.div`
   width: 93%;
@@ -22,14 +23,22 @@ const Title = styled.p`
   letter-spacing: 0.05em;
 `;
 
-const VariousCard = ({ image, title }) => (
+const VariousCard = ({ card }) => (
   <Card>
-    <Image src={image} />
+    <Image src={card.img} />
     <Title>
-      {title}
+      {card.title}
       <ArrowRightAlt style={{ paddingTop: '0.25em' }} />
     </Title>
   </Card>
 );
+
+VariousCard.propTypes = {
+  card: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    img: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }),
+};
 
 export default VariousCard;

@@ -3,7 +3,7 @@ import Announcement from '../components/Announcement';
 import Slider from '../components/Slider';
 import Products from '../components/Products';
 import Advert from '../components/Advert';
-import Various from '../components/VariousCard';
+import Various from '../components/Various';
 
 const Home = () => (
   <div>
