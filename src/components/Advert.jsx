@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 const AdvertContainer = styled.div`
-  margin-top: 1.5em;
-  margin-bottom: 5em;
+  margin-top: 3em;
   display: flex;
   flex-wrap: wrap;
   padding: 0 0.85em;

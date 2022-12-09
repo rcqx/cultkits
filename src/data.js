@@ -25,4 +25,37 @@ const products = [
   },
 ];
 
-export default products;
+const various = [
+  {
+    id: 1,
+    img: 'https://cdn.shopify.com/s/files/1/0622/3691/7987/collections/International_1000x.jpg?v=1669397291',
+    title: 'International',
+  },
+  {
+    id: 2,
+    img: 'https://cdn.shopify.com/s/files/1/0622/3691/7987/collections/england-section-1080-x-720-1_1000x.jpg?v=1669397671',
+    title: 'England',
+  },
+  {
+    id: 3,
+    img: 'https://cdn.shopify.com/s/files/1/0622/3691/7987/collections/Premier_League_1000x.jpg?v=1669400579',
+    title: 'Premier League',
+  },
+  {
+    id: 4,
+    img: 'https://cdn.shopify.com/s/files/1/0622/3691/7987/collections/Legends_535x.jpg?v=1669397420',
+    title: 'Legends',
+  },
+  {
+    id: 5,
+    img: 'https://cdn.shopify.com/s/files/1/0622/3691/7987/collections/Jackets_tracksuits_1000x.jpg?v=1669397485',
+    title: 'Jackets & Tracksuits',
+  },
+  {
+    id: 6,
+    img: 'https://cdn.shopify.com/s/files/1/0622/3691/7987/collections/View_All_Clearance_330x.jpg?v=1670092694',
+    title: 'Clearance',
+  },
+];
+
+export { products, various };

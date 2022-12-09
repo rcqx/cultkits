@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import ProductItem from './ProductItem';
-import products from '../data';
+import { products } from '../data';
 
 const Container = styled.div`
   width: 100%;
@@ -20,6 +20,7 @@ const Title = styled.h1`
   letter-spacing: 0.05em;
   font-weight: 400;
   padding-top: 2em;
+  padding-bottom: 1em;
   font-size: 1.2em;
   margin-left: 1.5em;
   text-align: left;
