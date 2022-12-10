@@ -5,18 +5,18 @@ import { ArrowRightAlt } from '@material-ui/icons';
 const OuterContainer = styled.div`
   height: 70vh;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   background-color: #F5F5F5;
-  padding-left: 1em;
+  padding-left: 0.5em;
+
 `;
 
 const Container = styled.div`
   width: 100%;
   display: flex;
   overflow: hidden;
-  display: flex;
-  margin: 0.5em;
+  padding-left: 0.5em;
 `;
 
 const SlidesContainer = styled.div`
@@ -24,11 +24,14 @@ const SlidesContainer = styled.div`
 `;
 
 const Slide = styled.div`
-  width: 92vw;
+  width: 100%;
 `;
 
 const Card = styled.div`
-  margin-right: 0.25em;
+  margin-right: 0.5em;
+  width: 90vw;
+  display: flex;
+  flex-direction: column; 
 `;
 
 const Description = styled.div`
@@ -39,16 +42,63 @@ const Description = styled.div`
 `;
 
 const Slider2 = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
   const [touchPosition, setTouchPosition] = useState(null);
+
+  const handleClick = (direction) => {
+    if (direction === 'left') {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+    } else {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+    }
+  };
+
+  const handleTouchStart = (e) => {
+    const touchDown = e.touches[0].clientX;
+    setTouchPosition(touchDown);
+  };
+
+  const handleTouchMove = (e) => {
+    const touchDown = touchPosition;
+
+    if (touchDown === null) {
+      return;
+    }
+
+    const currentTouch = e.touches[0].clientX;
+    const diff = touchDown - currentTouch;
+
+    if (diff > 5) {
+      handleClick('right');
+    }
+
+    if (diff < -5) {
+      handleClick('left');
+    }
+
+    setTouchPosition(null);
+  };
 
   return (
     <OuterContainer>
       <Container>
-        <SlidesContainer className="slider-cont">
+        <SlidesContainer
+          className="slider-cont"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+        >
           <Card className="slider-card">
             <Slide id="ad1" />
             <Description>
-              <p style={{ marginTop: '1em', marginRight: '0.5em' }}>Sign up now and get 10% OFF</p>
+              <p style={{
+                marginTop: '1em',
+                marginRight: '0.5em',
+                fontSize: '0.95em',
+                letterSpacing: '0.05em',
+              }}
+              >
+                Sign up now and get 10% OFF
+              </p>
               <ArrowRightAlt style={{ paddingTop: '0.75em' }} />
             </Description>
           </Card>
@@ -68,7 +118,7 @@ const Slider2 = () => {
           </Card>
         </SlidesContainer>
       </Container>
-    </OuterContainer >
+    </OuterContainer>
   );
-}
+};
 export default Slider2;
