@@ -8,19 +8,19 @@ const OuterContainer = styled.div`
   justify-content: start;
   align-items: center;
   background-color: #F5F5F5;
-  padding-left: 0.5em;
-
 `;
 
 const Container = styled.div`
   width: 100%;
   display: flex;
   overflow: hidden;
-  padding-left: 0.5em;
+  padding-left: 0.85em;
 `;
 
 const SlidesContainer = styled.div`
   display: flex;
+  transition: all 1s ease-in-out;
+  transform: translateX(${(props) => props.slideIndex * -92}vw);
 `;
 
 const Slide = styled.div`
@@ -29,7 +29,7 @@ const Slide = styled.div`
 
 const Card = styled.div`
   margin-right: 0.5em;
-  width: 90vw;
+  width: 91vw;
   display: flex;
   flex-direction: column; 
 `;
@@ -84,6 +84,7 @@ const Slider2 = () => {
       <Container>
         <SlidesContainer
           className="slider-cont"
+          slideIndex={slideIndex}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
         >

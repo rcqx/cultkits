@@ -7,6 +7,7 @@ import Various from '../components/Various';
 import Merch from '../components/Merch';
 import Advert2 from '../components/Advert2';
 import Slider2 from '../components/Slider2';
+import Welcome from '../components/Welcome';
 
 const Home = () => (
   <div>
@@ -19,6 +20,7 @@ const Home = () => (
     <Merch />
     <Advert2 />
     <Slider2 />
+    <Welcome />
   </div>
 );
 
