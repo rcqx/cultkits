@@ -26,6 +26,27 @@
   background-repeat: no-repeat;
 }
 
+#ad1 {
+  background-image: url("https://cdn.shopify.com/s/files/1/0622/3691/7987/files/Sign-up-2.jpg?v=1645458576");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#ad2 {
+  background-image: url("https://cdn.shopify.com/s/files/1/0622/3691/7987/files/New-pod-s3-ep4.jpg?v=1669822673");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#ad3 {
+  background-image: url("https://cdn.shopify.com/s/files/1/0622/3691/7987/files/Gift-cards-promo-1.jpg?v=1645133081");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .container {
   height: 37px;
   background-color: black;
@@ -55,11 +76,4 @@
   100% {
     transform: translate(-100%, 0);
   }
-}
-
-#advert1 {
-  background-image: url("./assets/ad1.webp");
-  background-size: 150%;
-  background-position: center;
-  background-repeat: no-repeat;
 }
