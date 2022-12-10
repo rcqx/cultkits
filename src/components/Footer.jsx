@@ -1,8 +1,16 @@
 import styled from 'styled-components';
+import {
+  Twitter,
+  Facebook,
+  Instagram,
+  YouTube,
+  Shop,
+} from '@material-ui/icons';
 
 const Container = styled.div`
   padding: 50px 40px 30px;
   background-color: black;
+  border: 1px soli
 `;
 
 const List = styled.ul`
@@ -27,11 +35,25 @@ const TPContainer = styled.div`
   display: flex; 
   justify-content: center; 
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 4em;
 `;
 
 const Trustpilot = styled.img`
-width: 50%;
+width: 45%;
+`;
+
+const SocialContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid gray;
+`;
+
+const SocialIcons = styled.div`
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const Footer = () => (
@@ -52,8 +74,8 @@ const Footer = () => (
     </List>
     <List style={{ marginBottom: '3em' }}>
       <Title>CULT KITS</Title>
-      <Item>Unit 3, The Shaftesbury Centre, Percy Streetm, Swindon, SN2 2AZ, United Kingdom</Item>
-      <Item>
+      <Item style={{ fontSize: '1em' }}>Unit 3, The Shaftesbury Centre, Percy Streetm, Swindon, SN2 2AZ, United Kingdom</Item>
+      <Item style={{ fontSize: '1em' }}>
         VAT No. GB 24045871700
         <br />
         Registered Company 10124704.
@@ -62,6 +84,15 @@ const Footer = () => (
     <TPContainer>
       <Trustpilot src="https://cdn.shopify.com/s/files/1/0622/3691/7987/files/Trust-pilot-rating-site-promo-4_140x@2x.png?v=1664819133" />
     </TPContainer>
+    <SocialContainer>
+      <SocialIcons>
+        <Twitter style={{ color: 'white' }} />
+        <Facebook style={{ color: 'white' }} />
+        <Instagram style={{ color: 'white' }} />
+        <YouTube style={{ color: 'white' }} />
+        <Shop style={{ color: 'white' }} />
+      </SocialIcons>
+    </SocialContainer>
   </Container>
 );
 
