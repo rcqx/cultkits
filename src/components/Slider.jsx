@@ -13,6 +13,9 @@ const Container = styled.div`
   overflow: hidden;
   overflow-x: hidden;
   display: flex;
+  @media (min-width: 768px){
+    height: 90vh;
+  }
 `;
 
 const Arrow = styled.div`

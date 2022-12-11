@@ -1,27 +1,27 @@
 #slide1 {
   background-image: url("./assets/hero1.webp");
-  background-size: 150%;
+  background-size: 140%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #slide2 {
   background-image: url("./assets/hero2.webp");
-  background-size: 150%;
+  background-size: 140%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #slide3 {
   background-image: url("./assets/hero3.webp");
-  background-size: 150%;
+  background-size: 140%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #slide4 {
   background-image: url("./assets/hero4.webp");
-  background-size: 150%;
+  background-size: 140%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -78,5 +78,14 @@
   } 
   100% {
     transform: translate(-100%, 0);
+  }
+}
+
+@media (min-width: 768px) {
+  #slide1,
+  #slide2,
+  #slide3,
+  #slide4 {
+    background-size: 145%;
   }
 }
