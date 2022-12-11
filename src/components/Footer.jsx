@@ -39,7 +39,7 @@ const TPContainer = styled.div`
 `;
 
 const Trustpilot = styled.img`
-width: 45%;
+width: 47%;
 `;
 
 const SocialContainer = styled.div`
@@ -47,7 +47,6 @@ const SocialContainer = styled.div`
   justify-content: space-around;
   width: 100%;
   margin-bottom: 1.5em;
-  border-bottom: 1px solid gray;
 `;
 
 const SocialIcons = styled.div`

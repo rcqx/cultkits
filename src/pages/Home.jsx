@@ -9,6 +9,7 @@ import Advert2 from '../components/Advert2';
 import Slider2 from '../components/Slider2';
 import Welcome from '../components/Welcome';
 import Footer from '../components/Footer';
+import Region from '../components/Region';
 
 const Home = () => (
   <div>
@@ -23,6 +24,7 @@ const Home = () => (
     <Slider2 />
     <Welcome />
     <Footer />
+    <Region />
   </div>
 );
 
