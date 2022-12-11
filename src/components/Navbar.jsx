@@ -10,9 +10,13 @@ import {
   from '@material-ui/icons';
 import { Badge } from '@material-ui/core';
 import logo from '../assets/logo.jpeg';
+import NavList from './NavList';
 
 const Container = styled.div`
   background-color: white;
+  @media (min-width: 992px) {
+    padding-top: 1em;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -28,7 +32,6 @@ const LeftMobil = styled.div`
   align-item: center;
   justify-content: space-around;
   padding: 0 0.65em;
-
   @media (min-width: 768px) {
     display: none; 
   }
@@ -142,6 +145,7 @@ const Navbar = () => (
         </Badge>
       </RightDesktop>
     </Wrapper>
+    <NavList />
   </Container>
 );
 
