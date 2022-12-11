@@ -11,6 +11,7 @@ import {
   LocalConvenienceStore,
 } from '@material-ui/icons';
 import styled from 'styled-components';
+import { regions } from '../data';
 
 const Container = styled.div`
   background-color: black;
@@ -61,7 +62,9 @@ const Region = () => (
         Country/region
       </Label>
       <Select id="region">
-        <option style={{ padding: '0.85em' }} label="United Kingdom (GBP &#163;)" />
+        {regions.map((item) => (
+          <option key={item.id} style={{ padding: '0.85em' }} label={item.region} />
+        ))}
       </Select>
     </SelectContainer>
     <PaymentsContainer>

@@ -85,4 +85,36 @@ const merch = [
   },
 ];
 
-export { products, various, merch };
+const regions = [
+  {
+    id: 1,
+    region: 'Albania (ALL)',
+  },
+  {
+    id: 2,
+    region: 'Mexico (MXN)',
+  },
+  {
+    id: 3,
+    region: 'Canada (CAN)',
+  },
+  {
+    id: 4,
+    region: 'United Kingdom (GBP)',
+  },
+  {
+    id: 5,
+    region: 'USA (USD)',
+  },
+  {
+    id: 6,
+    region: 'Ireland (EUR)',
+  },
+];
+
+export {
+  products,
+  various,
+  merch,
+  regions,
+};
