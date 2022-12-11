@@ -43,6 +43,20 @@ const LeftTablet = styled.div`
   @media (min-width: 768px) {
     display: flex; 
   }
+  @media (min-width: 1024px) {
+    display: none; 
+  }
+`;
+
+const LeftDesktop = styled.div`
+  flex: 1;
+  display: none;
+  align-item: center;
+  justify-content: start;
+  margin-left: 50px; 
+  @media (min-width: 1024px) {
+    display: flex; 
+  }
 `;
 
 const Center = styled.div`
@@ -70,6 +84,20 @@ const RightTablet = styled.div`
   @media (min-width: 768px) {
     display: flex; 
   }
+  @media (min-width: 1024px) {
+    display: none; 
+  }
+`;
+
+const RightDesktop = styled.div`
+  flex: 1;
+  display: none;
+  align-items: center;
+  justify-content: end;
+  padding: 0 0.65em;
+  @media (min-width: 1024px) {
+    display: flex; 
+  }
 `;
 
 const Logo = styled.div``;
@@ -84,6 +112,9 @@ const Navbar = () => (
       <LeftTablet class="tablet">
         <Menu fontSize="large" style={{ color: 'black' }} />
       </LeftTablet>
+      <LeftDesktop class="tablet">
+        <Search style={{ color: 'black' }} fontSize="large" />
+      </LeftDesktop>
       <Center>
         <Logo>
           <img src={logo} alt="logo" style={{ width: '4.5em' }} />
@@ -103,6 +134,13 @@ const Navbar = () => (
           <LocalMallOutlined style={{ color: 'black' }} />
         </Badge>
       </RightTablet>
+      <RightDesktop>
+        <FavoriteBorderOutlined fontSize="large" style={{ marginLeft: '0.5em' }} />
+        <PersonOutlineOutlined fontSize="large" style={{ marginLeft: '0.5em' }} />
+        <Badge badgeContent={4} color="primary" style={{ margin: '0 0.4em' }}>
+          <LocalMallOutlined fontSize="large" style={{ marginLeft: '0.4em' }} />
+        </Badge>
+      </RightDesktop>
     </Wrapper>
   </Container>
 );
