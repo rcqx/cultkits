@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { KeyboardArrowDown } from '@material-ui/icons';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const List = styled.ul`
   heigth: 90vh;
@@ -88,13 +88,33 @@ const ListTitle = styled.span`
 const NavList = () => {
   const [showClubs, setShowClubs] = useState(false);
   const [international, setInternational] = useState(false);
-  const handleClick = (state, setState) => {
+  const handleClickClubs = (state) => {
     if (state === false) {
-      setState(true);
+      setShowClubs(true);
+      setInternational(false);
     } else {
-      setState(false);
+      setShowClubs(false);
     }
   };
+  const handleClickInt = (state) => {
+    if (state === false) {
+      setInternational(true);
+      setShowClubs(false);
+    }
+  };
+
+  // Close navlink when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (event.target.closest('ul')) return;
+      setShowClubs(false);
+      setInternational(false);
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   return (
     <List>
@@ -102,7 +122,7 @@ const NavList = () => {
         <Anchor href="https://www.cultkits.com/collections/new-in">NEW IN</Anchor>
       </ListItem>
 
-      <ListTitle onClick={() => handleClick(showClubs, setShowClubs)}>
+      <ListTitle onClick={() => handleClickClubs(showClubs)}>
         <div style={{ display: 'flex' }}>
           CLUBS
           <KeyboardArrowDown fontSize="small" />
@@ -139,7 +159,7 @@ const NavList = () => {
         </InnerList>
       </ListTitle>
 
-      <ListTitle onClick={() => handleClick(international, setInternational)}>
+      <ListTitle onClick={() => handleClickInt(international)}>
         <div style={{ display: 'flex' }}>
           INTERNATIONAL
           <KeyboardArrowDown fontSize="small" />
