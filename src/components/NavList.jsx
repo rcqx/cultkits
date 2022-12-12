@@ -16,7 +16,7 @@ border: 1px solid #F5F5F5;
 heigth: 90vh;
 display: ${(props) => props.show === false && 'none'};
 width: 200px;
-padding: 0;
+padding: 1em 0;
 flex-direction: column;
 justify-content: center;
 background-color: white;
@@ -46,14 +46,15 @@ const ListItem = styled.li`
 const InnerListItem = styled.li`
 list-style: none;
 margin: 10px 12px;
-font-size: 0.85em;
+font-size: 1em;
 letter-spacing: 0.05em;
 font-weight: 400;
 color: #505050;
 display: flex; 
-justify-content: center;
-align-items: center;
+justify-content: start;
 cursor: pointer;
+padding: 0.25em 1em;
+text-align: left;
   &:hover {
   color: black;
 }
@@ -85,12 +86,13 @@ const ListTitle = styled.span`
 `;
 
 const NavList = () => {
-  const [showNavlist, setShowNavlist] = useState(false);
-  const handleClick = (state) => {
+  const [showClubs, setShowClubs] = useState(false);
+  const [international, setInternational] = useState(false);
+  const handleClick = (state, setState) => {
     if (state === false) {
-      setShowNavlist(true);
+      setState(true);
     } else {
-      setShowNavlist(false);
+      setState(false);
     }
   };
 
@@ -100,24 +102,80 @@ const NavList = () => {
         <Anchor href="https://www.cultkits.com/collections/new-in">NEW IN</Anchor>
       </ListItem>
 
-      <ListTitle onClick={() => handleClick(showNavlist)}>
+      <ListTitle onClick={() => handleClick(showClubs, setShowClubs)}>
         <div style={{ display: 'flex' }}>
           CLUBS
           <KeyboardArrowDown fontSize="small" />
         </div>
-        <InnerList show={showNavlist}>
-          <InnerListItem>Something</InnerListItem>
-          <InnerListItem>Something</InnerListItem>
-          <InnerListItem>Something</InnerListItem>
-          <InnerListItem>Something</InnerListItem>
-          <InnerListItem>Something</InnerListItem>
-          <InnerListItem>Something</InnerListItem>
+        <InnerList show={showClubs}>
+          <InnerListItem>
+            Premier League
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+          <InnerListItem>
+            Scottish Clubs
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+          <InnerListItem>
+            Other UK Clubs
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+          <InnerListItem>
+            Italian Clubs
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+          <InnerListItem>
+            Spanish Clubs
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+          <InnerListItem>
+            German Clubs
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+          <InnerListItem>
+            French Clubs
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
         </InnerList>
       </ListTitle>
-      <ListItem>
-        INTERNATIONAL
-        <KeyboardArrowDown fontSize="small" />
-      </ListItem>
+
+      <ListTitle onClick={() => handleClick(international, setInternational)}>
+        <div style={{ display: 'flex' }}>
+          INTERNATIONAL
+          <KeyboardArrowDown fontSize="small" />
+        </div>
+        <InnerList show={international}>
+          <InnerListItem>
+            Premier League
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+          <InnerListItem>
+            Scottish Clubs
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+          <InnerListItem>
+            Other UK Clubs
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+          <InnerListItem>
+            Italian Clubs
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+          <InnerListItem>
+            Spanish Clubs
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+          <InnerListItem>
+            German Clubs
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+          <InnerListItem>
+            French Clubs
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+        </InnerList>
+      </ListTitle>
+
       <ListItem style={{ color: '#FF1100' }}>
         CLEARANCE
         <KeyboardArrowDown fontSize="small" />
