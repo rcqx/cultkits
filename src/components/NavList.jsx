@@ -14,7 +14,7 @@ const List = styled.ul`
 const InnerList = styled.ul`
 border: 1px solid #F5F5F5;
 heigth: 90vh;
-display: none;
+display: ${(props) => props.show === false && 'none'};
 width: 200px;
 padding: 0;
 flex-direction: column;
@@ -105,7 +105,7 @@ const NavList = () => {
           CLUBS
           <KeyboardArrowDown fontSize="small" />
         </div>
-        <InnerList>
+        <InnerList show={showNavlist}>
           <InnerListItem>Something</InnerListItem>
           <InnerListItem>Something</InnerListItem>
           <InnerListItem>Something</InnerListItem>
@@ -138,7 +138,7 @@ const NavList = () => {
         MERCHANDISE
         <KeyboardArrowDown fontSize="small" />
       </ListItem>
-    </List >
+    </List>
   );
 };
 
