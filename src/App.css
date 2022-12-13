@@ -1,6 +1,6 @@
 #slide1 {
   background-image: url("./assets/hero1.webp");
-  background-size: 140%;
+  background-size: 150%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -89,3 +89,22 @@
     background-size: 145%;
   }
 }
+
+@media (min-width: 1024px) {
+  #slide1,
+  #slide2,
+  #slide3,
+  #slide4 {
+    background-size: 100%;
+  }
+}
+
+@media (max-width:390px) {
+  #slide1,
+  #slide2,
+  #slide3,
+  #slide4 {
+    background-size: 180%;
+  }
+}
+

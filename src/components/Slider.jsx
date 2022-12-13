@@ -59,6 +59,7 @@ const Button = styled.button`
 const ControllerContainer = styled.div`
   height: 2.875em;
   display: flex;
+  width: 300px;
   justify-content: center;
   align-items: center;
 `;
@@ -140,19 +141,27 @@ const Slider = () => {
           </Slide>
         </Wrapper>
       </Container>
-      <ControllerContainer style={{ position: 'relative' }}>
-        <Arrow direction="left" onClick={() => handleClick('left')} style={{ paddingRight: '1.5em' }}>
-          <KeyboardArrowLeft />
-        </Arrow>
-        <SlideStateContainer>
-          {images.map((slide, index) => (
-            <StateInput key={Math.random()} bgColor={index === slideIndex ? 'black' : ''} />
-          ))}
-        </SlideStateContainer>
-        <Arrow direction="right" onClick={() => handleClick('right')} style={{ paddingLeft: '1.5em' }}>
-          <KeyboardArrowRight />
-        </Arrow>
-      </ControllerContainer>
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+      >
+        <ControllerContainer style={{ position: 'relative' }}>
+          <Arrow direction="left" onClick={() => handleClick('left')} style={{ paddingRight: '1.5em' }}>
+            <KeyboardArrowLeft />
+          </Arrow>
+          <SlideStateContainer>
+            {images.map((slide, index) => (
+              <StateInput key={Math.random()} bgColor={index === slideIndex ? 'black' : ''} />
+            ))}
+          </SlideStateContainer>
+          <Arrow direction="right" onClick={() => handleClick('right')} style={{ paddingLeft: '1.5em' }}>
+            <KeyboardArrowRight />
+          </Arrow>
+        </ControllerContainer>
+      </div>
     </OuterContainer>
   );
 };

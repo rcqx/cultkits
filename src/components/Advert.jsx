@@ -5,29 +5,34 @@ const AdvertContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 0 0.85em;
+  min-height: 28.62em;
+  border: 1px solid red;
+  @media (min-width: 768px;)
 `;
 
 const ImageContainer = styled.div`
-  height: 12.12em;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  border: 1px solid red;
+  width: 21em;
+  height: auto;
 `;
 
-const Image = styled.img`
-  width: 100%;
-`;
+// const Image = styled.img`
+//   width: 100%;
+// `;
 
 const InfoContainer = styled.div`
   background-color: #121212;
-  border: 1px solid black;
   height: 22.5em;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 2.5em;
+  width: 21em;
+  height: auto;
 `;
 
 const Title = styled.p`
@@ -47,7 +52,7 @@ const Description = styled.p`
   letter-spacing: 0.05em;
   line-height: 2em;
   font-weight: 400;
-`;
+  `;
 
 const Button = styled.button`
   border: none;
@@ -59,10 +64,10 @@ const Button = styled.button`
 `;
 
 const Advert = () => (
-  <AdvertContainer className="advert-cont">
-    <ImageContainer>
-      <Image src="https://cdn.shopify.com/s/files/1/0622/3691/7987/files/1000-x-1000-arsenal-re-issues_535x.jpg?v=1670092337" />
-    </ImageContainer>
+  <AdvertContainer>
+    <ImageContainer />
+    {/* <Image src="https://cdn.shopify.com/s/files/1/0622/3691/7987/files/1000-x-1000-arsenal-re-issues_535x.jpg?v=1670092337" />
+    </ImageContainer> */}
     <InfoContainer className="info-cont">
       <Title>Arsenal 1993/94 away adidas originals</Title>
       <Description>

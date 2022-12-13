@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 const List = styled.ul`
   heigth: 90vh;
-  display: flex;
+  display: none;
   justify-content: center;
   @media (min-width: 992px) {
     display: flex;
@@ -41,6 +41,18 @@ const ListItem = styled.li`
     color: black;
     text-decoration: underline;
   }
+`;
+
+const ListItemDisable = styled.li`
+  list-style: none;
+  margin: 10px 12px;
+  font-size: 0.85em;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  color: gray;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 `;
 
 const InnerListItem = styled.li`
@@ -88,10 +100,12 @@ const ListTitle = styled.span`
 const NavList = () => {
   const [showClubs, setShowClubs] = useState(false);
   const [international, setInternational] = useState(false);
+  const [clearance, setClear] = useState(false);
   const handleClickClubs = (state) => {
     if (state === false) {
       setShowClubs(true);
       setInternational(false);
+      setClear(false);
     } else {
       setShowClubs(false);
     }
@@ -100,6 +114,18 @@ const NavList = () => {
     if (state === false) {
       setInternational(true);
       setShowClubs(false);
+      setClear(false);
+    } else {
+      setInternational(false);
+    }
+  };
+  const handleClickClear = (state) => {
+    if (state === false) {
+      setClear(true);
+      setInternational(false);
+      setShowClubs(false);
+    } else {
+      setClear(false);
     }
   };
 
@@ -109,6 +135,7 @@ const NavList = () => {
       if (event.target.closest('ul')) return;
       setShowClubs(false);
       setInternational(false);
+      setClear(false);
     };
     document.addEventListener('click', handleClickOutside);
     return () => {
@@ -196,26 +223,39 @@ const NavList = () => {
         </InnerList>
       </ListTitle>
 
-      <ListItem style={{ color: '#FF1100' }}>
-        CLEARANCE
-        <KeyboardArrowDown fontSize="small" />
-      </ListItem>
-      <ListItem>
+      <ListTitle onClick={() => handleClickClear(clearance)}>
+        <div style={{ display: 'flex', color: '#FF1100' }}>
+          CLEARANCE
+          <KeyboardArrowDown fontSize="small" />
+        </div>
+        <InnerList show={clearance}>
+          <InnerListItem>
+            New Clearance
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+          <InnerListItem>
+            Vintage Sale
+            <KeyboardArrowDown fontSize="small" style={{ padding: '0.1em 0.25em' }} />
+          </InnerListItem>
+        </InnerList>
+      </ListTitle>
+
+      <ListItemDisable>
         TRAINING
         <KeyboardArrowDown fontSize="small" />
-      </ListItem>
-      <ListItem>
+      </ListItemDisable>
+      <ListItemDisable>
         HEROS
         <KeyboardArrowDown fontSize="small" />
-      </ListItem>
-      <ListItem>
+      </ListItemDisable>
+      <ListItemDisable>
         OTHER PRODUCTS
         <KeyboardArrowDown fontSize="small" />
-      </ListItem>
-      <ListItem>
+      </ListItemDisable>
+      <ListItemDisable>
         MERCHANDISE
         <KeyboardArrowDown fontSize="small" />
-      </ListItem>
+      </ListItemDisable>
     </List>
   );
 };

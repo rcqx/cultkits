@@ -56,7 +56,8 @@ const LeftDesktop = styled.div`
   display: none;
   align-item: center;
   justify-content: start;
-  margin-left: 50px; 
+  margin-left: 50px;
+  cursor: pointer;
   @media (min-width: 1024px) {
     display: flex; 
   }
@@ -98,8 +99,12 @@ const RightDesktop = styled.div`
   align-items: center;
   justify-content: end;
   padding: 0 0.65em;
+  margin-right: 3em;
   @media (min-width: 1024px) {
     display: flex; 
+  }
+  & > * {
+    cursor: pointer;
   }
 `;
 
