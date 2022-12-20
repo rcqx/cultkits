@@ -7,6 +7,10 @@ const Container = styled.div`
   width: 45%;
   padding: 0.25em;
   margin-bottom: 0.5em;
+
+  @media (min-width: 992px) {
+    width: 24%;
+  }
 `;
 
 const Image = styled.img`

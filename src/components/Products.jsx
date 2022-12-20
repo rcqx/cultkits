@@ -13,22 +13,28 @@ const ProductsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media (min-width: 992px) {
+    justify-content: space-between;
+    padding: 0 3em;
+  }
 `;
 
 const TitleContainer = styled.div`
-  width: 100%;
+  width: 91%;
 `;
 
 const Title = styled.h1`
-  font-size: 1em;
   letter-spacing: 0.05em;
   font-weight: 400;
   padding-top: 2em;
   padding-bottom: 1em;
   font-size: 1.2em;
   text-align: left;
-  width: 90%;
-  margin-left: 0.8em;
+
+  @media (min-width: 768px) { 
+    font-size: 1.5em;
+  }
 `;
 
 const Button = styled.button`
@@ -45,10 +51,10 @@ const Button = styled.button`
 
 const Products = () => (
   <Container>
-    <TitleContainer>
-      <Title>NEWLY ADDED PRODUCTS</Title>
-    </TitleContainer>
     <ProductsContainer>
+      <TitleContainer>
+        <Title>NEWLY ADDED PRODUCTS</Title>
+      </TitleContainer>
       {products.map((item) => (
         <ProductItem key={item.id} item={item} />
       ))}
