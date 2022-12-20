@@ -26,6 +26,14 @@
   background-repeat: no-repeat;
 }
 
+#advert {
+  background-image: url("https://cdn.shopify.com/s/files/1/0622/3691/7987/files/1000-x-1000-arsenal-re-issues_535x.jpg?v=1670092337");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 194px;
+}
+
 #ad1 {
   background-image: url("https://cdn.shopify.com/s/files/1/0622/3691/7987/files/Sign-up-2.jpg?v=1645458576");
   background-size: 100%;
@@ -80,7 +88,7 @@
     transform: translate(-100%, 0);
   }
 }
-
+https://cdn.shopify.com/s/files/1/0622/3691/7987/files/1000-x-1000-arsenal-re-issues_535x.jpg?v=1670092337
 @media (min-width: 768px) {
   #slide1,
   #slide2,
@@ -104,7 +112,7 @@
   #slide2,
   #slide3,
   #slide4 {
-    background-size: 180%;
+    background-size: 150%;
   }
 }
 
