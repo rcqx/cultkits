@@ -8,6 +8,11 @@ const Container = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 
 const Various = () => (

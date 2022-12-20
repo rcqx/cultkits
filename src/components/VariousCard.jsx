@@ -6,6 +6,11 @@ const Card = styled.div`
   width: 93%;
   margin-bottom: 0.75em;
   cursor: pointer;
+  
+  @media (min-width: 768px) {
+    width: 30%;
+    margin: 0.25em 0.25em;
+  }
 `;
 
 const Image = styled.img`

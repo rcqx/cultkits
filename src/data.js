@@ -53,7 +53,7 @@ const various = [
   },
   {
     id: 6,
-    img: 'https://cdn.shopify.com/s/files/1/0622/3691/7987/collections/View_All_Clearance_330x.jpg?v=1670092694',
+    img: 'https://cdn.shopify.com/s/files/1/0622/3691/7987/collections/xmas-gift-ideas-square-promo-01_750x.jpg?v=1671024591',
     title: 'Clearance',
   },
 ];
