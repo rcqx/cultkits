@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const AdvertContainer = styled.div`
   margin: 3.125em 0;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 0 0.85em;
   margin-bottom: 3em;
@@ -11,24 +12,38 @@ const AdvertContainer = styled.div`
 const ImageContainer = styled.div`
   overflow: hidden;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   width: 100%;
+
+  @media (min-width: 768px) {
+    width: 45%;
+  }
 `;
 
 const Image = styled.img`
   width: 100%;
+
+  @media (min-width: 768px) {
+    display: flex;
+    width: auto;
+  }
+
+  @media (min-width: 768px) {
+    scale: 130%;
+  }
 `;
 
 const InfoContainer = styled.div`
   background-color: #121212;
-  border: 1px solid black;
-  height: 22.5em;
   display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 2.5em;
+  padding: 2.5em 2.5em;
+
+  @media (min-width: 768px) {
+    width: 40%;
+  }
 `;
 
 const Title = styled.p`
@@ -38,7 +53,6 @@ const Title = styled.p`
   letter-spacing: 0.025em;
   margin: 0;
   padding: 0;
-  min-width: 255px;
   line-height: 1.25em;
   margin-bottom: 0.5em;
   text-align: center;

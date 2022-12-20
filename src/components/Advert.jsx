@@ -5,6 +5,7 @@ const AdvertContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 0.85em;
+  border: 2px solid red;
 
   @media (min-width: 768px){
     flex-direction: row;
