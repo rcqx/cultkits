@@ -5,11 +5,10 @@ const AdvertContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 0.85em;
-  // min-height: 28.62em;
-  border: 1px solid red;
 
   @media (min-width: 768px){
     flex-direction: row;
+    padding: 0 3em;
   }
 `;
 
@@ -18,12 +17,10 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 194px;
 
   @media (min-width: 768px){
-    height: 555px;
-    width: 50%;
-    border: 1px solid blue; 
+    flex: 1;
+    height: 100%;
   }
 `;
 
@@ -35,11 +32,10 @@ const InfoContainer = styled.div`
   justify-content: center;
   padding: 3em;
   height: auto;
-  
+
   @media (min-width: 768px){
-    height: 555px;
-    width: 50%;
-    border: 1px solid blue; 
+    padding: 3em 4em;
+    flex: 1;
   }
 `;
 
