@@ -11,6 +11,11 @@ const Card = styled.div`
     width: 30%;
     margin: 0.25em 0.25em;
   }
+
+  @media (min-width: 768px) {
+    width: 31%;
+    margin: 0.25em 0.25em;
+  }
 `;
 
 const Image = styled.img`
