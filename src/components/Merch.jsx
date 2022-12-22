@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import MerchItem from './ProductItem';
+import MerchItem from './MerchItem';
 import { merch } from '../data';
 
 const Container = styled.div`
@@ -7,7 +7,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid red; 
 `;
 
 const MerchContainer = styled.div`
@@ -17,7 +16,7 @@ const MerchContainer = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  width: 100%;
+  width: 94%;
 `;
 
 const Title = styled.h1`
@@ -28,8 +27,6 @@ const Title = styled.h1`
   padding-bottom: 1em;
   font-size: 1.2em;
   text-align: left;
-  width: 90%;
-  margin-left: 0.8em;
 `;
 
 const Button = styled.button`

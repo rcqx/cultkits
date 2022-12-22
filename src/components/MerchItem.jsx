@@ -4,9 +4,13 @@ import PropTypes from 'prop-types';
 const Container = styled.div`
   cursor: pointer;
   overflow: hidden;
-  width: 45%;
-  padding: 0.25em;
+  width: 46.5%;
+  margin: 0 0.35em;
   margin-bottom: 0.5em;
+
+  @media (min-width: 992px) {
+    width: 23%;
+  }
 `;
 
 const Image = styled.img`
@@ -32,7 +36,7 @@ const MerchItem = ({ item }) => (
   </Container>
 );
 
-ProductItem.propTypes = {
+MerchItem.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.number.isRequired,
     img: PropTypes.string.isRequired,
