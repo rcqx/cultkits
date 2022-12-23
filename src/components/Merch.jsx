@@ -39,6 +39,7 @@ const Button = styled.button`
   background-color: black;
   color white;
   margin-top: 2.5em;
+  margin-bottom: 2em;
 `;
 
 const Merch = () => (

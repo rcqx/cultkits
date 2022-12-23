@@ -7,6 +7,10 @@ const AdvertContainer = styled.div`
   flex-wrap: wrap;
   padding: 0 0.85em;
   margin-bottom: 3em;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -16,7 +20,7 @@ const ImageContainer = styled.div`
   width: 100%;
 
   @media (min-width: 768px) {
-    width: 45%;
+    width: 46%;
   }
 `;
 
@@ -29,7 +33,7 @@ const Image = styled.img`
   }
 
   @media (min-width: 768px) {
-    scale: 130%;
+    scale: 135%;
   }
 `;
 
@@ -42,7 +46,7 @@ const InfoContainer = styled.div`
   padding: 2.5em 2.5em;
 
   @media (min-width: 768px) {
-    width: 40%;
+    width: 43%;
   }
 `;
 
