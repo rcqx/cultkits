@@ -21,6 +21,12 @@ const SlidesContainer = styled.div`
   display: flex;
   transition: all 1s ease-in-out;
   transform: translateX(${(props) => props.slideIndex * -92}vw);
+
+  @media (min-width: 992px) {
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Slide = styled.div`
@@ -31,7 +37,12 @@ const Card = styled.div`
   margin-right: 0.5em;
   width: 91vw;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  cursor: pointer;
+
+  @media (min-width: 992px) {
+    width: 31.5%;
+  }
 `;
 
 const Description = styled.div`

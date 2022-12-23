@@ -66,6 +66,12 @@
   height: 360px;
 }
 
+@media (min-width: 992px) {
+  #ad1, #ad2, #ad3 {
+    height: 467px;
+  }
+}
+
 .container {
   height: 37px;
   background-color: black;
