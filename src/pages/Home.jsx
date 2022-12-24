@@ -7,6 +7,7 @@ import Various from '../components/Various';
 import Merch from '../components/Merch';
 import Advert2 from '../components/Advert2';
 import Slider2 from '../components/Slider2';
+import Slider2Desktop from '../components/Slider2Desktop';
 import Welcome from '../components/Welcome';
 import Footer from '../components/Footer';
 import Region from '../components/Region';
@@ -22,6 +23,7 @@ const Home = () => (
     <Merch />
     <Advert2 />
     <Slider2 />
+    <Slider2Desktop />
     <Welcome />
     <Footer />
     <Region />

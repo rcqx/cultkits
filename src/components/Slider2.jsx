@@ -3,12 +3,16 @@ import styled from 'styled-components';
 import { ArrowRightAlt } from '@material-ui/icons';
 
 const OuterContainer = styled.div`
-  height: 70vh;
   display: flex;
   justify-content: start;
   align-items: center;
   background-color: #F5F5F5;
-  padding: 1em 0;
+  border: 1px solid red;
+  padding-top: 50px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const Container = styled.div`
@@ -23,19 +27,6 @@ const SlidesContainer = styled.div`
   transition: all 1s ease-in-out;
   transform: translateX(${(props) => props.slideIndex * -92}vw);
   border: 2px solid blue;
-
-  @media (min-width: 481px) {
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    height: 574px;
-  }
-
-  @media (min-width: 992px) {
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-  }
 `;
 
 // const Slide = styled.div`
