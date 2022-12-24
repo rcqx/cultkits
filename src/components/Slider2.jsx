@@ -8,6 +8,7 @@ const OuterContainer = styled.div`
   justify-content: start;
   align-items: center;
   background-color: #F5F5F5;
+  padding: 1em 0;
 `;
 
 const Container = styled.div`
@@ -21,6 +22,14 @@ const SlidesContainer = styled.div`
   display: flex;
   transition: all 1s ease-in-out;
   transform: translateX(${(props) => props.slideIndex * -92}vw);
+  border: 2px solid blue;
+
+  @media (min-width: 481px) {
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    height: 574px;
+  }
 
   @media (min-width: 992px) {
     width: 100vw;
@@ -29,9 +38,9 @@ const SlidesContainer = styled.div`
   }
 `;
 
-const Slide = styled.div`
-  width: 100%;
-`;
+// const Slide = styled.div`
+//   width: 100%;
+// `;
 
 const Card = styled.div`
   margin-right: 0.5em;
@@ -39,10 +48,15 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  border: 1px solid red;
 
   @media (min-width: 992px) {
-    width: 31.5%;
+    width: 31%;
   }
+`;
+
+const Image = styled.img`
+  border: 1px solid red;
 `;
 
 const Description = styled.div`
@@ -100,7 +114,8 @@ const Slider2 = () => {
           onTouchMove={handleTouchMove}
         >
           <Card className="slider-card">
-            <Slide id="ad1" />
+            <Image src="https://cdn.shopify.com/s/files/1/0622/3691/7987/files/Sign-up-2.jpg?v=1645458576" alt="ad1" />
+            {/* <Slide id="ad1" /> */}
             <Description>
               <p style={{
                 marginTop: '1em',
@@ -115,14 +130,16 @@ const Slider2 = () => {
             </Description>
           </Card>
           <Card className="slider-card">
-            <Slide id="ad2" />
+            {/* <Slide id="ad2" /> */}
+            <Image src="https://cdn.shopify.com/s/files/1/0622/3691/7987/files/New-pod-s3-ep4.jpg?v=1669822673" alt="ad2" />
             <Description>
               <p style={{ marginTop: '1em', marginRight: '0.5em' }}>Sign up now and get 10% OFF</p>
               <ArrowRightAlt style={{ paddingTop: '0.75em' }} />
             </Description>
           </Card>
           <Card className="slider-card">
-            <Slide id="ad3" />
+            <Image src="https://cdn.shopify.com/s/files/1/0622/3691/7987/files/Gift-cards-promo-1.jpg?v=1645133081" alt="ad3" />
+            {/* <Slide id="ad3" /> */}
             <Description>
               <p style={{ marginTop: '1em', marginRight: '0.5em' }}>Sign up now and get 10% OFF</p>
               <ArrowRightAlt style={{ paddingTop: '0.75em' }} />
