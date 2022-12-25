@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import { ArrowRightAlt } from '@material-ui/icons';
 
 const Container = styled.div`
-  border: 2px solid red;
   display: none;
+  background-color: whitesmoke;
+  padding: 3em 0;
 
   @media (min-width: 768px) {
     display: flex;
@@ -15,22 +16,18 @@ const Container = styled.div`
 const SlidesContainer = styled.div`
   display: flex;
   justify-content: center;
-  border: 1px solid blue;
   width: 100vw;
 `;
 
 const Card = styled.div`
   margin-right: 0.5em;
-  width: 31%;
+  width: 30.5%;
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  border: 1px solid red;
 `;
 
-const Image = styled.img`
-  border: 1px solid red;
-`;
+const Image = styled.img``;
 
 const Description = styled.div`
   padding: 1.56em;
@@ -58,7 +55,7 @@ const Slider2Desktop = () => (
         </Description>
       </Card>
       <Card>
-        <Image src="https://cdn.shopify.com/s/files/1/0622/3691/7987/files/Sign-up-2.jpg?v=1645458576" alt="ad1" />
+        <Image src="https://cdn.shopify.com/s/files/1/0622/3691/7987/files/New-pod-s3-ep4.jpg?v=1669822673" alt="ad1" />
         <Description>
           <p style={{
             marginTop: '1em',
@@ -73,7 +70,7 @@ const Slider2Desktop = () => (
         </Description>
       </Card>
       <Card>
-        <Image src="https://cdn.shopify.com/s/files/1/0622/3691/7987/files/Sign-up-2.jpg?v=1645458576" alt="ad1" />
+        <Image src="https://cdn.shopify.com/s/files/1/0622/3691/7987/files/Gift-cards-promo-1.jpg?v=1645133081" alt="ad1" />
         <Description>
           <p style={{
             marginTop: '1em',

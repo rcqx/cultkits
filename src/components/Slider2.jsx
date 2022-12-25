@@ -7,8 +7,7 @@ const OuterContainer = styled.div`
   justify-content: start;
   align-items: center;
   background-color: #F5F5F5;
-  border: 1px solid red;
-  padding-top: 50px;
+  padding: 50px 0 30px 0;
 
   @media (min-width: 768px) {
     display: none;
@@ -26,7 +25,6 @@ const SlidesContainer = styled.div`
   display: flex;
   transition: all 1s ease-in-out;
   transform: translateX(${(props) => props.slideIndex * -92}vw);
-  border: 2px solid blue;
 `;
 
 // const Slide = styled.div`
@@ -39,16 +37,13 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  border: 1px solid red;
 
   @media (min-width: 992px) {
     width: 31%;
   }
 `;
 
-const Image = styled.img`
-  border: 1px solid red;
-`;
+const Image = styled.img``;
 
 const Description = styled.div`
   padding: 1.56em;
