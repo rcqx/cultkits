@@ -4,7 +4,7 @@ import { ArrowRightAlt } from '@material-ui/icons';
 const Container = styled.div`
   display: none;
   background-color: whitesmoke;
-  padding: 3em 0;
+  padding: 4.5em 0;
 
   @media (min-width: 768px) {
     display: flex;
