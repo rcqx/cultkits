@@ -11,13 +11,29 @@ const Title = styled.h1`
   font-weight: 400;
   letter-spacing: 0.025em;
   margin-bottom: 1em;
+
+  @media (min-width: 692px) {
+    font-size: 1.5em;
+  }
 `;
 
 const Description = styled.p`
   text-align: center;
-  line-height: 1.5em;
+  line-height: 1.85em;
   color: #404040;
   letter-spacing: 0.05em;
+  font-size: 0.9em;
+  padding: 0 0.25em;
+
+  @media (min-width: 692px) {
+    padding: 0 5em;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 23em;
+    font-size: 0.95em;
+    line-height: 1.85em;
+  }
 `;
 
 const Welcome = () => (
