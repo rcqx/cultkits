@@ -23,7 +23,6 @@ const Container = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: row;
-    border: 1px solid red;
     justify-content: space-between;
   }
 `;
@@ -34,6 +33,11 @@ const SelectContainer = styled.div`
   justify-content: center; 
   background-color: black;
   width: 41%;
+
+  @media (min-width: 768px) {
+    width: 15%;
+    padding: 0 3em;
+  }
 `;
 
 const Label = styled.label`
@@ -53,19 +57,32 @@ const PaymentsContainer = styled.div`
   width: 80%;
   justify-content: center;
   margin-top: 3em;
+
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+  }
 `;
 
 const Cr = styled.p`
   font-size: 0.65em;
   color: white;
   margin-top: 2em;
+
+  @media (min-width: 768px) {
+    padding-right: 1em;
+  }
 `;
 
 const RegionRight = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid red;
+
+  @media (min-width: 768px) {
+    align-items: flex-end;
+    flex: 1;
+    padding-right: 3em;
+  }
 `;
 
 const Region = () => (
