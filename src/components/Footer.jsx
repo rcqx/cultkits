@@ -19,7 +19,6 @@ const List = styled.ul`
   margin: 0;
 
   @media(min-width: 768px) {
-    border: 1px dashed red;
     width: 30%;
   }
 `;
@@ -53,6 +52,11 @@ const TPContainer = styled.div`
 
 const Trustpilot = styled.img`
 width: 47%;
+
+@media (min-width: 768px) {
+  width: 45%;
+  padding-right: 5em;
+}
 `;
 
 const SocialContainer = styled.div`
@@ -68,13 +72,11 @@ const SocialIcons = styled.div`
   justify-content: space-between;
 
   @media(min-width: 762px) {
-    border: 1px solid red; 
+    width: 15%;
   }
 `;
 
 const ListContainer = styled.div`
-  border: 1px solid red;
-
   @media(min-width: 768px) {
     display: flex;
     align-items: start;
