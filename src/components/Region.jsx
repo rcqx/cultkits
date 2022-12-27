@@ -20,6 +20,12 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 20em;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    border: 1px solid red;
+    justify-content: space-between;
+  }
 `;
 
 const SelectContainer = styled.div`
@@ -55,6 +61,13 @@ const Cr = styled.p`
   margin-top: 2em;
 `;
 
+const RegionRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid red;
+`;
+
 const Region = () => (
   <Container>
     <SelectContainer>
@@ -67,21 +80,23 @@ const Region = () => (
         ))}
       </Select>
     </SelectContainer>
-    <PaymentsContainer>
-      <Payment fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
-      <Contactless fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
-      <AccountBalance fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
-      <CardGiftcard fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
-      <AddShoppingCart fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
-      <CardMembership fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
-      <CreditCard fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
-      <LocalAtm fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
-      <LocalMall fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
-      <LocalConvenienceStore fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
-    </PaymentsContainer>
-    <Cr>
-      © 2022, Cult Kits
-    </Cr>
+    <RegionRight>
+      <PaymentsContainer>
+        <Payment fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
+        <Contactless fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
+        <AccountBalance fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
+        <CardGiftcard fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
+        <AddShoppingCart fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
+        <CardMembership fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
+        <CreditCard fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
+        <LocalAtm fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
+        <LocalMall fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
+        <LocalConvenienceStore fontSize="large" style={{ color: 'white', margin: '0.2em' }} />
+      </PaymentsContainer>
+      <Cr>
+        © 2022, Cult Kits
+      </Cr>
+    </RegionRight>
   </Container>
 );
 
