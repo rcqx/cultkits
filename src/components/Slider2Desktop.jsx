@@ -16,12 +16,12 @@ const Container = styled.div`
 const SlidesContainer = styled.div`
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 98vw;
 `;
 
 const Card = styled.div`
   margin-right: 0.5em;
-  width: 30.5%;
+  width: 31.25%;
   display: flex;
   flex-direction: column;
   cursor: pointer;
