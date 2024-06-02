@@ -9,7 +9,6 @@ We stock thousands of vintage jerseys, along with unique bench, training and out
 ## Built With
 
 - React / Redux
-- Stripe
 - Styled components 
 
 ## Getting Started
